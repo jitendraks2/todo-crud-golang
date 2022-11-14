@@ -19,7 +19,7 @@ func Connect() {
 		log.Fatal("Error loading .env file")
 	}
 
-	dsn := os.Getenv("DB_URL")
+	dsn := os.Getenv("RENDER_DB_URL")
 
 	connection, err := gorm.Open(mysql.Open(dsn), &gorm.Config{})
 
